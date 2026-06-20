@@ -1,0 +1,19 @@
+[project]
+name = "pynexus-workspace"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[tool.uv.workspace]
+members = [
+    "libs/shared",
+    "services/api",
+    "services/admin",
+    "services/worker",
+    "services/pipeline",
+    "services/ml",
+    "services/ai",
+    "cli",
+]
