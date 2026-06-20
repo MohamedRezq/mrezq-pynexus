@@ -7,7 +7,15 @@ authors = [
     { name = "MohamedRezq", email = "mrezq.dev@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "asyncpg>=0.31.0",
+    "passlib[bcrypt]>=1.7.4",
+    "pydantic>=2.13.4",
+    "python-jose[cryptography]>=3.5.0",
+    "redis[hiredis]>=8.0.0",
+    "sqlalchemy>=2.0.51",
+    "structlog>=26.1.0",
+]
 
 [build-system]
 requires = ["uv_build>=0.11.21,<0.12.0"]
