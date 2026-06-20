@@ -1,0 +1,23 @@
+line-length = 100
+target-version = "py312"
+indent-width = 4
+exclude = [".venv", "__pycache__", "alembic/versions", "*.pyi"]
+
+[lint]
+select = ["E","F","I","N","UP","B","A","C4","PT","S"]
+ignore = [
+    "S101",   # assert statements OK
+    "S104",   # binding to 0.0.0.0 OK in Docker
+    "A003",   # shadowing builtins OK in ORM column names
+    "N805",   # first arg not self OK for pydantic validators (@classmethod)
+]
+
+[lint.per-file-ignores]
+"tests/**/*.py" = ["S", "ANN", "PLR2004"]
+"alembic/**"   = ["ALL"]
+"manage.py"    = ["ALL"]
+
+[format]
+quote-style = "double"
+indent-style = "space"
+docstring-code-format = true
