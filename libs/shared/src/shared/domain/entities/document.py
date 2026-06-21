@@ -56,7 +56,7 @@ class Document:
 
     @property
     def size_mb(self) -> float:
-        if not self.file_size_bytes:
+        if self.file_size_bytes is None:
             raise ValueError("No File Exists.")
         else:
             return round(self.file_size_bytes / (1024 * 1024), 2)
