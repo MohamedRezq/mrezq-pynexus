@@ -6,7 +6,7 @@ from typing import Literal
 
 from email_validator import EmailNotValidError, validate_email
 from pycountry import countries
-from shared.domains.enums import RiskLevel
+from shared.domain.enums import RiskLevel
 
 
 @dataclass(frozen=True)  # frozen=True: immutable + hashable
